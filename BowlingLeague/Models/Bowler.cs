@@ -25,5 +25,7 @@ namespace BowlingLeague.Models
 
         public virtual Team Team { get; set; }
         public virtual ICollection<BowlerScore> BowlerScores { get; set; }
+
+        //adding a comment
     }
 }
