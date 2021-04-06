@@ -3,6 +3,7 @@ namespace BowlingLeague.Models.ViewModels
 {
     public class PageNumberingInfo
     {
+        //A class with all the attributes we need to keep track of
         public int NumOfItemsPerPage { get; set; }
 
         public int CurrentPage { get; set; }

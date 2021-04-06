@@ -16,8 +16,10 @@ namespace BowlingLeague.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        //access to the database
         private BowlingLeagueContext Context { get; set; }
 
+        // a variable that lets me know what team im on
         public string TeamCategory { get; set; }
 
         public HomeController(ILogger<HomeController> logger, BowlingLeagueContext context)
@@ -32,6 +34,7 @@ namespace BowlingLeague.Controllers
 
             return View(new IndexViewModel
             {
+                //Setting the bowlers information
                 Bowlers = Context.Bowlers
                 .Where(x => x.TeamId == teamid || teamid == null)
                 .OrderBy(x => x.Team)

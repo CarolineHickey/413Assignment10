@@ -8,6 +8,7 @@
 
 @foreach (var x in Model)
 {
+    <!--Build the buttons for the teams on the side-->
     <a asp-action="Index"
        asp-controller="Home"
        asp-route-teamid="@x.TeamId"

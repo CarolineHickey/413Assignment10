@@ -30,7 +30,6 @@ namespace BowlingLeague.Infrastructure
 
 
         public PageNumberingInfo pageInfo { get; set; }
-        
 
         [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
 
@@ -54,6 +53,7 @@ namespace BowlingLeague.Infrastructure
                 
                 individualTag.Attributes["href"] = urlHelper.Action(i.ToString());
 
+                //This is my attempt to getting the teams names to be selected :(
                 if (PageClassesEnabled)
                 {
                     individualTag.AddCssClass(PageClass);
@@ -65,6 +65,8 @@ namespace BowlingLeague.Infrastructure
                     //Then the buttons change depending on where you are/ what the i is equal to
                     individualTag.AddCssClass(i == pageInfo.CurrentPage ? PageClassSelected : PageClassNormal);
                 };
+
+                //Add all the parts together through the append method
 
                 individualTag.InnerHtml.Append(i.ToString());
 
