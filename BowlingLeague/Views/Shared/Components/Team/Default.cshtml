@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Team>
+
+
+<a class="btn btn-primary" asp-action="Index" asp-controller="Home" asp-route-teamid="">Home</a>
+<br />
+<br />
+
+
+@foreach (var x in Model)
+{
+    <a asp-action="Index"
+       asp-controller="Home"
+       asp-route-teamid="@x.TeamId"
+       asp-route-teamName="@x.TeamName">@x.TeamName</a>
+    <br />
+    <br />
+}
+
+<!-- <div page-model="" page-action="Index" page-classes-enabled="true" page-class="btn"
+     page-class-normal="btn-outline-light"
+     page-class-selected="btn-light" page-url-category=""
+     class="pager">
+     btn-group pull-right m-1
+</div>-->

@@ -1,0 +1,44 @@
+﻿@{
+    
+}
+@model IndexViewModel 
+
+<div class="text-center">
+    <h1 class="display-4">@Model.TeamCategory</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Middle Name</td>
+                <td>Last Name</td>
+                <td>Address</td>
+                <td>City</td>
+                <td>State</td>
+                <td>Zip</td>
+                <td>Phone Number</td>
+            </tr>
+            @foreach (var t in Model.Bowlers)
+            {
+        <tr>
+            <td>@t.BowlerFirstName</td>
+            <td>@t.BowlerMiddleInit</td>
+            <td>@t.BowlerLastName</td>
+            <td>@t.BowlerAddress</td>
+            <td>@t.BowlerCity</td>
+            <td>@t.BowlerState</td>
+            <td>@t.BowlerZip</td>
+            <td>@t.BowlerPhoneNumber</td>
+        </tr>
+            }
+            </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+       
+</div>
+<div page-info="Model.PageNumberingInfo" page-url-teamcategory="@Model.TeamCategory"></div>
+
