@@ -11,9 +11,17 @@
     <a asp-action="Index"
        asp-controller="Home"
        asp-route-teamid="@x.TeamId"
-       asp-route-teamName="@x.TeamName">@x.TeamName</a>
-    <br />
-    <br />
+       asp-route-teamName="@x.TeamName"
+       page-class="btn"
+       page-url-category="@x"
+       page-class-selected="btn-light"
+       page-class-normal="btn-outline-light"
+       page-classes-enabled="true">
+        @x.TeamName
+</a>
+
+<br />
+<br />
 }
 
 <!-- <div page-model="" page-action="Index" page-classes-enabled="true" page-class="btn"

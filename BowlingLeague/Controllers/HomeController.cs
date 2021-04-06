@@ -18,7 +18,7 @@ namespace BowlingLeague.Controllers
 
         private BowlingLeagueContext Context { get; set; }
 
-
+        public string TeamCategory { get; set; }
 
         public HomeController(ILogger<HomeController> logger, BowlingLeagueContext context)
         {

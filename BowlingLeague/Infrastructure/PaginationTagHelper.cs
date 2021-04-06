@@ -20,14 +20,17 @@ namespace BowlingLeague.Infrastructure
             urlInfo = uhf;
         }
 
+
+        //tag helpers that will set the team as highlighted
         public bool PageClassesEnabled { get; set; } = false;
         public string PageClass { get; set; }
         public string PageClassNormal { get; set; }
         public string PageClassSelected { get; set; }
+        public string TeamCategory { get; set; }
 
 
         public PageNumberingInfo pageInfo { get; set; }
-        public string TeamCategory { get; set; }
+        
 
         [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
 
