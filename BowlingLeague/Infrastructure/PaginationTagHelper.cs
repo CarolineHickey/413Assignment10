@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace BowlingLeague.Infrastructure
 {
-    [HtmlTargetElement("div", Attributes = "page-model")]
 
     [HtmlTargetElement("div", Attributes = "page-info")]
     public class PaginationTagHelper : TagHelper
